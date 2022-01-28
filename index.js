@@ -33,5 +33,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, HOST, () => {
-  console.log(`http://${HOST}${PORT}`);
+  console.log(`http://${HOST}:${PORT}`);
 });
