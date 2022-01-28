@@ -3,7 +3,7 @@ const cors = require('cors');
 
 require('dotenv').config();
 
-const PORT = process.env.PORT || 3000;
+const { PORT } = process.env.PORT;
 
 const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
 const StrangerThingsRepository = require('./data/repository/StrangerThings');
@@ -32,6 +32,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  if (PORT === 3000) console.log(`http://localhost:${PORT}`);
-  if (PORT !== 3000) console.log('https://adrianomonteiroweb-bk.herokuapp.com/');
+  console.log(`http://localhost:${PORT}`);
 });
