@@ -32,5 +32,6 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`http://locolhost:${PORT}`);
+  if (PORT === 3000) console.log(`http://localhost:${PORT}`);
+  if (PORT !== 3000) console.log('https://adrianomonteiroweb-bk.herokuapp.com/');
 });
