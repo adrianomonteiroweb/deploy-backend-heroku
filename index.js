@@ -4,7 +4,6 @@ const cors = require('cors');
 require('dotenv').config();
 
 const PORT = process.env.PORT || 3000;
-const { HOST } = process.env;
 
 const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
 const StrangerThingsRepository = require('./data/repository/StrangerThings');
@@ -32,6 +31,6 @@ app.get('/', (req, res) => {
   res.status(200).json(characters);
 });
 
-app.listen(PORT, HOST, () => {
-  console.log(`http://${HOST}:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`http://locolhost:${PORT}`);
 });
